@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      font-size: 12px;
+      width: "6.25in";
+      font-family: Calibri, sans-serif;
+      text-align: justify;
+      line-height: 1.5;
+      margin: 94px;
+    }
+
+    h2 {
+      font-size: 13px;
+      margin-bottom: 0px;
+    }
+    
+    p {
+      font-size: 12px;
+      margin-bottom: 0px;
+    }
+
+    .title-section {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-bottom: 1px solid #c3c8d1;
+    }
+
+    .sub-title-table {
+      margin-bottom: 0px;
+      font-weight: bold;
+    }
+
+    table {
+      font-size: 12px;
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #080606;
+      text-align: left;
+      padding: 3px 4px;
+    }
+
+    .property-title {
+      width: 30%;
+      font-weight: bold;
+    }
+
+    .property-operator {
+      width: 10px;
+      font-weight: bold;
+    }
+
+    .property-value {
+      width: 70%;
+    }
+
+    .logo-group {
+      margin-top: 0px;
+    }
+
+    .mt-16 {
+      margin-top: 16px;
+    }
+
+    .bottom-section {
+      font-size: 11px;
+    }
+
+    .description {
+      font-size: 11px;
+      margin: 2px;
+    }
+
+    ul {
+      margin-top: 0px;
+    }
+  </style>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disbursement</title>
+  </head>
+
+  <body>
+    <div class="logo-group">
+      <img src="https://storage.googleapis.com/ekuid-assets/Icon/ekuid-logo.svg" height="24px" alt="ekuid-logo" />
+      <img src="https://storage.googleapis.com/ekuid-assets/Icon/ekuid-single-logo.svg" height="24px" />
+    </div>
+
+    <div class="title-section">
+      <h2>RINGKASAN PEMBELIAN EFEK</h2>
+    </div>
+
+    <p>Kepada Yth. <%= investor_name %></p>
+
+    <p>
+      Dengan ini kami sampaikan bahwa Ibu/Bapak <%= investor_name %> telah melakukan
+      pembelian <%= is_debt ? "Efek Bersifat Utang (EBU)" : "Efek Bersifat Ekuitas(EBE)" %> pada<strong>
+        Proyek Pendanaan <%= project_name %>
+      </strong>
+      sebagaimana penerbitan Efek oleh <%= owner_name %> (“Penerbit”) di
+      Platform Investasi Layanan Urun Dana EKUID berdasarkan Perjanjian
+      Penyelenggaraan Layanan Urun Dana antara PT Likuid Jaya Pratama
+      (“Penyelenggara”) dengan <%= investor_name %> (Pemodal). Detail pembelian
+      <%= is_debt ? "EBU" : "EBE" %> sebagai berikut:
+    </p>
+
+    <p class="sub-title-table">Ringkasan Efek</p>
+
+    <table>
+      <tr>
+        <td class="property-title">Jenis Efek</td>
+        <td class="property-operator">:</td>
+        <td class="property-value">
+          <%= is_debt ? "Efek Bersifat Utang (EBU)" : "Efek Bersifat Ekuitas(EBE)" %>
+        </td>
+      </tr>
+      <tr>
+        <td class="property-title">Nama Efek</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= project_name %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Nilai Pendanaan</td>
+        <td class="property-operator">:</td>
+        <td class="property-value">
+          <%= disbursed_amount %>
+        </td>
+      </tr>
+      <tr>
+        <td class="property-title">Tenor Pendanaan</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= tenor %> bulan</td>
+      </tr>
+      <tr>
+        <td class="property-title">Bunga</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= interest_rate %>% per-tahun</td>
+      </tr>
+      <tr>
+        <td class="property-title">Jadwal Pembayaran Bunga</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= repayment_period %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Jadwal Pembayaran Pokok</td>
+        <td class="property-operator">:</td>
+        <td class="property-value">
+          Pada Saat Jatuh Tempo - tanggal <%= maturity_date %>
+        </td>
+      </tr>
+      <tr>
+        <td class="property-title">Tata Cara Pembayaran</td>
+        <td class="property-operator">:</td>
+        <td class="property-value">
+          Apabila tanggal pembayaran jatuh pada hari bukan hari kerja, maka
+          tanggal pembayaran adalah hari kerja berikutnya
+        </td>
+      </tr>
+      <tr>
+        <td class="property-title">Masa Penawaran Efek</td>
+        <td class="property-operator">:</td>
+        <td class="property-value">Maksimal 45 hari</td>
+      </tr>
+      <tr>
+        <td class="property-title">Minimum Pembelian</td>
+        <td class="property-operator">:</td>
+        <td class="property-value">Rp. 100.000</td>
+      </tr>
+      <tr>
+        <td class="property-title">Jumlah Efek Ditawarkan</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= project_amount %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Tanggal Distribusi Efek</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= disbursement_date %></td>
+      </tr>
+    </table>
+
+    <p class="sub-title-table mt-16">Ringkasan Pembelian Efek</p>
+
+    <table>
+      <tr>
+        <td class="property-title">Nomor Pemodal</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= sid %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Nama Pemodal</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= investor_name %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Jumlah Pembelian Efek</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= invested_amount %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Total Pembelian</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= invested_amount %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Tanggal Pembelian</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= investment_date %></td>
+      </tr>
+      <tr>
+        <td class="property-title">Tanggal Efektif *</td>
+        <td class="property-operator">:</td>
+        <td class="property-value"><%= disbursement_date %></td>
+      </tr>
+    </table>
+    <div class="bottom-section">
+      <p class="description">
+        * Perhitungan bunga dihitung sejak Tanggal Efektif
+      </p>
+      <br />
+      <p class="description">Catatan:</p>
+      <ul>
+        <li>
+          Bila ada pernyataan atau informasi yang tidak sesuai dapat menghubungi
+          call center kami melalui Nomor telepon: 081388119390 & E-mail:
+          <span style="color: #188fda">support@eku.id</span>
+        </li>
+        <li>
+          PT Likuid Jaya Pratama berizin dan diawasi oleh OJK sebagai
+          Penyelenggara Penawaran Efek melalui Layanan Urun Dana Berbasis
+          Teknologi Informasi dengan Surat Keputusan Nomor Kep- 11/D.04/2022
+          tertanggal 9 Februari 2022.
+        </li>
+        <li>
+          Rincian efek di atas dapat dicek melalui laman KSEI dengan terlebih
+          dahulu melakukan pendaftaran dan login pada link
+          <a
+            style="color: #188fda"
+            href=" https://akses.ksei.co.id/register"
+            target="_blank"
+          >
+            https://akses.ksei.co.id/register.</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

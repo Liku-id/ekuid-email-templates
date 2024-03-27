@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <style>
+    body {
+      font-size: 10px;
+      width: "8.27in";
+      /* text-align: justify; */
+      /* line-height: 1.5; */
+      font-family: arial, sans-serif;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .common {
+      font-size: 9px;
+      font-family: arial, sans-serif;
+      text-align: justify;
+    }
+
+    .description {
+      font-size: 8px;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .title {
+      font-size: 11px;
+      font-family: arial, sans-serif;
+    }
+
+    .background {
+      background-color: #530000;
+    }
+
+    .white {
+      color: white;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .p-2 {
+      padding: 2px;
+    }
+
+    .px-4 {
+      padding: 4px 0px;
+    }
+
+    .pl-16 {
+      padding-left: 16px;
+    }
+
+    .pl-24 {
+      padding-left: 24px;
+    }
+
+    .pr-24 {
+      padding-right: 24px;
+    }
+
+    .py-24 {
+      padding: 0px 24px;
+    }
+
+    .ml-8 {
+      margin-left: 8px;
+    }
+
+    .ml-10 {
+      margin-left: 10px;
+    }
+
+    .mt-8 {
+      margin-top: 8px;
+    }
+
+    .mt-16 {
+      margin-top: 16px;
+    }
+
+    .mt-64 {
+      margin-top: 44px;
+    }
+
+    .mb-8 {
+      margin-bottom: 8px;
+    }
+
+    .mb-4 {
+      margin-bottom: 4px;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .w-160 {
+      width: 160px !important;
+    }
+
+    .w-32 {
+      width: 30px;
+    }
+
+    .w-75p {
+      width: 75%;
+    }
+
+    .w-28p {
+      width: 28%;
+    }
+
+    .w-25p {
+      width: 25%;
+    }
+
+    .w-20p {
+      width: 20%;
+    }
+
+    .h-28 {
+      height: 26px;
+    }
+
+    .h-24 {
+      height: 24px;
+    }
+
+    .half {
+      width: 50%;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .gap {
+      gap: 8px;
+    }
+
+    .item-center {
+      align-items: center;
+    }
+
+    .between {
+      justify-content: space-between;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .item-start {
+      align-items: start;
+    }
+
+    .border-1 {
+      border: solid 0.2px #000000;
+    }
+
+    .statement {
+      padding: 8px 24px;
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      width: 100%;
+    }
+
+    .signature {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      width: 100%;
+    }
+  </style>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Formulir Pendaftaran Emiten Area</title>
+  </head>
+
+  <body>
+    <div class="flex between mt-16">
+      <img
+        src="https://storage.googleapis.com/ekuid-assets/Icon/ksei.png"
+        height="64px"
+      />
+      <p class="bold">Lampiran 7</p>
+    </div>
+
+    <p class="bold title mt-16">
+      <u>Formulir Pendaftaran Emiten Area</u><br />
+      <i>Issuers Area Registration Form</i>
+    </p>
+
+    <div class="border-1 mt-16">
+      <div class="background center px-4 bold white flex gap">
+        <p>A.</p>
+        <p>Data Perusahaan / Company Data</p>
+      </div>
+
+      <div class="flex gap pl-24 px-4">
+        <div class="w-25p flex between item-center">
+          <p class="common">
+            <u>Jenis Perusahaan</u><br />
+            <i>Company Type</i>
+          </p>
+          <p class="common">:</p>
+        </div>
+
+        <div class="w-75p flex item-center">
+          <div class="half flex gap item-center">
+            <div class="border-1 w-32 h-28 flex center item-center">
+              <i class="material-icons"><%= isAreaPenerbit ? 'check' : '' %></i>
+            </div>
+            <p class="common">
+              <u>Penerbit Efek</u><br />
+              <i>Issuer</i>
+            </p>
+          </div>
+          <div class="half flex gap item-center">
+            <div class="border-1 w-32 h-28 flex center item-center">
+              <i class="material-icons"><%= isAreaPenerbit ? '' : 'check' %></i>
+            </div>
+            <p class="common">
+              <u>Pengelola Administrasi Efek</u><br />
+              <i>Registrar</i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap background bold white px-4 item-center">
+        <p class="pl-16">I.</p>
+        <p>
+          <u>Data Penerbit Efek *)</u><br />
+          <i>Issuer Data</i>
+        </p>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">1.</p>
+            <p class="description">
+              <u>Nama Penerbit Efek</u><br />
+              <i>Issuer’s Name</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"><%= isAreaPenerbit ? ownerName : '' %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">2.</p>
+            <p class="description">
+              <u>Alamat</u><br />
+              <i>Address</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"><%= isAreaPenerbit ? ownerAddress : '' %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">3.</p>
+            <p class="description">
+              <u>Kode Pos</u><br />
+              <i>Zip Code</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-25p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? ownerPostalCode : '' %>
+            </p>
+          </div>
+        </div>
+        <div class="w-20p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">4.</p>
+            <p class="description">
+              <u>Kota</u><br />
+              <i>City</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-28p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"><%= isAreaPenerbit ? ownerCity : '' %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">5.</p>
+            <p class="description">
+              <u>Nomor Telepon</u><br />
+              <i>Telephone Number</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-25p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? ownerPhoneNumber : '' %>
+            </p>
+          </div>
+        </div>
+        <div class="w-20p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">6.</p>
+            <p class="description">
+              <u>Nomor Faksimili</u><br />
+              <i>Fax Number</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-28p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">7.</p>
+            <p class="description">
+              <u>Surat Elektronik</u><br />
+              <i>Email Address</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-25p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"><%= isAreaPenerbit ? ownerEmail : '' %></p>
+          </div>
+        </div>
+        <div class="w-20p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">8.</p>
+            <p class="description">
+              <u>Nama Pengelola Administrasi</u><br />
+              <i>Registrar Name</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-28p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? 'PT Likuid Jaya Pratama' : '' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap background bold white px-4 item-center">
+        <p class="pl-16">II.</p>
+        <p>
+          <u>Data Pengelola Administrasi Efek*)</u><br />
+          <i>Registrar Data</i>
+        </p>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">1.</p>
+            <p class="description">
+              <u>Nama Pengelola Administrasi Efek</u><br />
+              <i>Registrar Name</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? '' : 'PT Likuid Jaya Pratama' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">2.</p>
+            <p class="description">
+              <u>Alamat</u><br />
+              <i>Address</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? '' : 'Jl. Ciniru III No.2, RT/RW 002/003,Rawa Barat, Kebayoran Baru, Jakarta Selatan'%>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">3.</p>
+            <p class="description">
+              <u>Kode Pos</u><br />
+              <i>Zip Code</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-25p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"><%= isAreaPenerbit ? '' :'12180' %></p>
+          </div>
+        </div>
+        <div class="w-20p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">4.</p>
+            <p class="description">
+              <u>Kota</u><br />
+              <i>City</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-28p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? '' : 'Jakarta Selatan' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">5.</p>
+            <p class="description">
+              <u>Nomor Telepon</u><br />
+              <i>Telephone Number</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-25p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? '' : '+62-2125556748' %>
+            </p>
+          </div>
+        </div>
+        <div class="w-20p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">6.</p>
+            <p class="description">
+              <u>Nomor Faksimili</u><br />
+              <i>Fax Number</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-28p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"><%= isAreaPenerbit ? '' : '' %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">7.</p>
+            <p class="description">
+              <u>Surat Elektronik</u><br />
+              <i>Email Address</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-25p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? '' : 'operations@eku.id' %>
+            </p>
+          </div>
+        </div>
+        <div class="w-20p flex between item-center"></div>
+        <div class="w-28p">
+          <div class="w-full h-28 item-center flex"></div>
+        </div>
+      </div>
+
+      <div class="background center px-4 bold white flex gap">
+        <p>B.</p>
+        <p>Pejabat Berwenang /Authorized Person</p>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">1.</p>
+            <p class="description">
+              <u>N a m a</u><br />
+              <i>N a m e</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? founderName: 'Felicitas Hakso Widiarto' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title ml-10"></p>
+            <p class="description">
+              <u>Jabatan</u><br />
+              <i>Title</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8">
+              <%= isAreaPenerbit ? founderPosition: 'Direktur Utama' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title">2.</p>
+            <p class="description">
+              <u>N a m a</u><br />
+              <i>N a m e</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap pl-24 pr-24 px-4">
+        <div class="w-25p flex between item-center">
+          <div class="flex gap item-center">
+            <p class="title ml-10"></p>
+            <p class="description">
+              <u>Jabatan</u><br />
+              <i>Title</i>
+            </p>
+          </div>
+          <p class="common">:</p>
+        </div>
+        <div class="w-75p">
+          <div class="border-1 w-full h-28 item-center flex">
+            <p class="title ml-8"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="background center px-4 bold white flex gap">
+        <p>C.</p>
+        <p>Pengesahan / Validationa</p>
+      </div>
+      <div class="statement">
+        <p class="description">
+          <i>
+            Dengan menandatangani Formulir Pendaftaran Emiten Area ini, kami
+            menyatakan telah membaca dan memahami seluruh peraturan KSEI tentang
+            penitipan kolektif di KSEI serta setuju untuk tunduk dan mematuhi
+            peraturan tersebut. KSEI tidak bertangung jawab atas penyalahgunaan
+            akses yang diberik an.<br />
+            By signing this Securities Registration Form, we declare that we
+            have read and understood all KSEI regulation regarding the c
+            ollective custody in KSEI, as well as we are subject to and abide by
+            those KSEI regulation. KSEI cannot be held responsible for misuse of
+            access.
+            <br />Kami menyatakan bahwa semua keterangan dan dokumen yang kami
+            berikan kepada KSEI adalah lengkap dan benar. We declare that all
+            information and documents submitted to KSEI are correct and
+            complete.
+          </i>
+        </p>
+        <div class="signature mt-8">
+          <div class="description">
+            <p class="h-24">Jakarta,</p>
+            <p class="align-center mt-64">
+              <span class="title">
+                <%= isAreaPenerbit ? `(${founderName})`  : '(Felicitas Hakso Widiarto)'
+                %></span
+              ><br />
+              <u>Nama, Tanda Tangan Pejabat berwenang 1& Cap Perusahaan</u
+              ><br />
+              <i>Name, Signature of 1st Authorized Signature & Issuer Stamp</i>
+            </p>
+          </div>
+          <div>
+            <p class="h-24"></p>
+            <p class="description align-center mt-64">
+              (..............................................................)<br />
+              <u>Nama, Tanda Tangan Pejabat berwenang 1& Cap Perusahaan</u
+              ><br />
+              <i>Name, Signature of 1st Authorized Signature & Issuer Stamp</i>
+            </p>
+          </div>
+          <div class="align-center">
+            <p class="description h-24">
+              <u>Petugas KSEI</u>**)<br />
+              <i>KSEI Officer</i>
+            </p>
+            <p class="description mt-64">
+              (..............................................................)<br />
+              <u>Nama & Tanda Tangan</u><br />
+              <i>Name & Signature</i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-4 footer">
+      <p class="pl-24 description">
+        *) <u> Diisi sesuai jenis perusahaan</u><br />
+        <i>*) Filled according to company type</i>
+      </p>
+      <p class="pl-24 description">
+        **) <u> Hanya diisi oleh Petugas KSEI</u><br />
+        <i>**) For KSEI use only</i>
+      </p>
+    </div>
+
+    <p class="title bold mt-16">FM-JKU-05-2013, Rev. 0</p>
+  </body>
+</html>
