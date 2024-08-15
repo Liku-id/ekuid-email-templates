@@ -319,15 +319,11 @@
                                                     text-align: left;
                                                   "
                                                 >
-                                                  <span style="color: #3c4858"
-                                                    ><strong
-                                                      ><span
-                                                        style="font-size: 18px"
-                                                        >Hai
-                                                        {params.first_name},</span
-                                                      ></strong
-                                                    ></span
-                                                  >
+                                                  <span style="color: #3c4858">
+                                                    <strong>
+                                                      <span style="font-size: 18px">Hai <%= first_name %>,<span>
+                                                    </strong>
+                                                  </span>
                                                 </td>
                                               </tr>
                                               <tr>
@@ -535,7 +531,7 @@
                                                 >
                                                   <div>
                                                     <div>
-                                                      {params.project_name}
+                                                      <%= project_name %>
                                                     </div>
                                                   </div>
                                                 </td>
@@ -608,7 +604,7 @@
                                                 >
                                                   <div>
                                                     <div>
-                                                      {params.VA_number}
+                                                      <%= va_number %>
                                                     </div>
                                                   </div>
                                                 </td>
@@ -781,7 +777,7 @@
                                                   "
                                                 >
                                                   <div>
-                                                    <div>{params.nominal}</div>
+                                                    <div><%= nominal %><div>
                                                   </div>
                                                 </td>
                                               </tr>
