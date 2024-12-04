@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>EKUID Loyalty Program</title>
+    <style>
+      body {
+        font-family: "Open Sans", Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+      .container {
+        background-color: #fff;
+        max-width: 526px;
+        margin: 20px auto;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 30px 0px rgba(13, 91, 159, 0.1);
+      }
+      .containerV2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background-color: #fff;
+        max-width: 526px;
+        margin: 34px auto;
+        padding: 30px 40px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 30px 0px rgba(13, 91, 159, 0.1);
+      }
+      .containerV3 {
+        max-width: 526px;
+        margin: 34px auto;
+        text-align: center;
+      }
+      h1,
+      h2 {
+        font-family: Kodchasan, Helvetica, sans-serif;
+        color: #1f335b;
+      }
+      p {
+        color: #79859d;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.272px;
+      }
+      .section-title {
+        color: #1f335b;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+      .program-table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      .program-table th,
+      .program-table td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+      }
+      .program-table th {
+        color: #1f335b;
+        text-align: left;
+      }
+      .btn {
+        width: 50%;
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+        padding: 14px 48px;
+        border-radius: 20px;
+        background: linear-gradient(
+          267deg,
+          #3a9dd1 -22.12%,
+          #408ec7 55.77%,
+          #3c70b7 127.43%
+        );
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+      .social-icons img {
+        width: 30px;
+        margin: 0 5px;
+      }
+      .footer {
+        font-size: 12px;
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 34px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div
+        style="display: flex; justify-content: center; padding: 48px 48px 34px"
+      >
+        <img
+          src="https://img.mailinblue.com/3254347/images/rnb/original/633be96708d00f6a964f2f9d.png"
+          class="rnb-logo-img"
+          style="max-width: 140px"
+          alt="EKUID Logo"
+          width="140"
+        />
+      </div>
+      <div class="container">
+        <h1 style="font-size: 20px">Hai <%= firstName %>,</h1>
+        <p>
+          Selamat, berikut adalah 10 orang dengan poin terbanyak di minggu ini.
+          Tambah terus poin mu dengan melakukan interaksi di EKUID App untuk
+          bisa dapatkan banyak keuntungan lainnya.
+        </p>
+
+        <h2 class="section-title">Loyalty Program</h2>
+        <table class="program-table">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nama</th>
+              <th>Jumlah Poin</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% loyaltyProgram.forEach((user, index) => { %>
+            <tr>
+              <td style="width: 8.78%"><%= index + 1 %></td>
+              <td style="width: 63.06%"><%= user.name %></td>
+              <td style="width: 28.15%"><%= user.points %> Poin</td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+
+        <div style="margin-top: 48px">
+          <h2 class="section-title">Referral Program</h2>
+          <table class="program-table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Nama</th>
+                <th>Jumlah Poin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% referralProgram.forEach((user, index) => { %>
+              <tr>
+                <td style="width: 8.78%"><%= index + 1 %></td>
+                <td style="width: 63.06%"><%= user.name %></td>
+                <td style="width: 28.15%"><%= user.points %> Poin</td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- button -->
+        <div style="display: flex; justify-content: center; padding-top: 20px">
+          <a
+            href="https://eku.id/project?utm_source=brevo&utm_campaign=Ekuid - Transaksi Dibatalkan&utm_medium=email"
+            class="btn"
+            >Cek Poinmu!</a
+          >
+        </div>
+      </div>
+
+      <div class="containerV2">
+        <p style="font-size: 16px; color: #1f335b; font-weight: 700">
+          Follow kami di:
+        </p>
+        <div class="social-icons">
+          <!-- Replace # with actual links -->
+          <a
+            href="https://www.linkedin.com/company/ekuid/mycompany/?utm_source=brevo&utm_campaign=Ekuid - Transaksi Dibatalkan&utm_medium=email"
+            ><img
+              src="https://creative-assets.mailinblue.com/rnb-assets/theme1/rnb_ico_in.png"
+              style="vertical-align: top"
+              border="0"
+              alt="LinkedIn"
+          /></a>
+          <a
+            href="https://instagram.com/ekuidofficial?utm_source=brevo&utm_campaign=Ekuid - Transaksi Dibatalkan&utm_medium=email"
+            ><img
+              src="https://creative-assets.mailinblue.com/rnb-assets/theme1/rnb_ico_ig.png"
+              style="vertical-align: top"
+              border="0"
+              alt="Instagram"
+          /></a>
+          <a
+            href="https://www.youtube.com/@ekuidofficial?utm_source=brevo&utm_campaign=Ekuid - Transaksi Dibatalkan&utm_medium=email"
+            ><img
+              src="https://creative-assets.mailinblue.com/rnb-assets/theme1/rnb_ico_yt.png"
+              style="vertical-align: top"
+              border="0"
+              alt="YouTube"
+          /></a>
+        </div>
+      </div>
+      <div class="containerV3">
+        <p class="footer">
+          Ini adalah e-mail otomatis, mohon untuk tidak membalas e-mail ini.
+        </p>
+
+        <div>
+          <h2
+            style="
+              font-family: Kodchasan, Helvetica, sans-serif;
+              color: #1f335b;
+              font-size: 18px;
+              margin-bottom: 16px;
+            "
+          >
+            Download aplikasi Ekuid di:
+          </h2>
+          <div style="display: flex; justify-content: center; gap: 16px">
+            <a href="https://apps.apple.com/us/app/ekuid/id1607289110"
+              ><img
+                src="https://storage.googleapis.com/ekuid-assets/Assets/app-store.webp"
+                style="height: 40px"
+                border="0"
+                alt="App Store"
+            /></a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ekuid.android.production"
+              ><img
+                src="https://storage.googleapis.com/ekuid-assets/Assets/play-store.webp"
+                style="height: 40px"
+                border="0"
+                alt="Play Store"
+            /></a>
+          </div>
+        </div>
+
+        <p style="font-size: 12px">
+          Jl. Ciniru III No.2, RT.2/RW.3, Rw. Bar., Kec. Kby. Baru, Kota Jakarta
+          Selatan, Daerah Khusus Ibukota Jakarta 12180
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
