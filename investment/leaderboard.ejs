@@ -125,7 +125,7 @@
           bisa dapatkan banyak keuntungan lainnya.
         </p>
 
-        <h2 class="section-title">Loyalty Program</h2>
+        <h2 class="section-title">Referral Program</h2>
         <table class="program-table">
           <thead>
             <tr>
@@ -135,7 +135,7 @@
             </tr>
           </thead>
           <tbody>
-            <% loyaltyProgram.forEach((user, index) => { %>
+            <% referralProgram.forEach((user, index) => { %>
             <tr>
               <td style="width: 8.78%"><%= index + 1 %></td>
               <td style="width: 63.06%"><%= user.name %></td>
@@ -146,7 +146,7 @@
         </table>
 
         <div style="margin-top: 48px">
-          <h2 class="section-title">Referral Program</h2>
+          <h2 class="section-title">Loyalty Program</h2>
           <table class="program-table">
             <thead>
               <tr>
@@ -156,7 +156,7 @@
               </tr>
             </thead>
             <tbody>
-              <% referralProgram.forEach((user, index) => { %>
+              <% loyaltyProgram.forEach((user, index) => { %>
               <tr>
                 <td style="width: 8.78%"><%= index + 1 %></td>
                 <td style="width: 63.06%"><%= user.name %></td>
