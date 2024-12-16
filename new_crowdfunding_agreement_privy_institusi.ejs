@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* A4 Page Layout with adjusted internal padding */
+    .a4 {
+      width: 210mm;
+      margin: auto;
+      background: white;
+      padding-top: 25.4mm;
+      padding-bottom: 25.4mm;
+      padding-left: 25.4mm;
+      padding-right: 40mm;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Centered Content */
+    .content {
+      max-width: 180mm;
+      text-align: justify;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-family: Calibri, sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      color: #333;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 11px;
+    }
+
+    ul {
+      margin: 10px 0 10px 0;
+      padding-left: 0;
+      list-style-type: none;
+      counter-reset: li;
+    }
+
+    ul li {
+      position: relative;
+      margin-left: 30px;
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    ul li::before {
+      content: "("counter(li) ") ";
+      counter-increment: li;
+      position: absolute;
+      left: -30px;
+      font-weight: bold;
+    }
+
+    ol {
+      margin: 10px 0 10px 0;
+      padding-left: 0px;
+      list-style-type: none;
+      counter-reset: list-counter;
+    }
+
+    ol li {
+      position: relative;
+      margin-left: 30px;
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    ol li::before {
+      content: counter(list-counter) ". ";
+      counter-increment: list-counter;
+      position: absolute;
+      left: -30px;
+      font-weight: bold;
+    }
+
+    ol.sub-list {
+      margin: 10px 0 10px 0;
+      padding-left: 0;
+      counter-reset: sub-counter;
+    }
+
+    ol.sub-list li {
+      position: relative;
+      margin-left: 30px;
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 11px;
+      margin-bottom: 0px;
+    }
+
+    ol.sub-list li::before {
+      content: counter(sub-counter, lower-alpha) ". ";
+      counter-increment: sub-counter;
+      position: absolute;
+      left: -30px;
+      font-weight: bold;
+    }
+
+    p {
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 11px;
+    }
+
+    .signature {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+    }
+
+    .signature div {
+      width: 45%;
+    }
+
+    .signature .left {
+      text-align: center;
+    }
+
+    .signature .right {
+      text-align: center;
+    }
+
+    @page {
+      size: A4;
+      margin-top: 25.4mm;
+      margin-bottom: 25.4mm;
+    }
+
+    /* Footer with page number */
+    footer {
+      position: absolute;
+      bottom: 10mm;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      color: #777;
+    }
+
+    footer::after {
+      content: counter(page);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a4">
+    <div class="content">
+      <h1>
+        PERJANJIAN PENYELENGGARAAN LAYANAN URUN DANA<br /> ANTARA PENYELENGGARA DAN PEMODAL INSTITUSI
+      </h1>
+      <br />
+      <p>
+        Perjanjian Penyelenggaraan Layanan Urun Dana antara Penyelenggara dan Pemodal (selanjutnya disebut juga
+        <strong>“Perjanjian”</strong>) dibuat dan ditandatangani pada hari <%= day %>, tanggal <%= date %>, oleh dan
+            antara:
+      </p>
+
+      <ul>
+        <li>Tuan Felicitas Hakso Widiarto, dalam hal ini bertindak dalam jabatannya selaku Direktur dari dan
+          karenanya
+          sah mewakili Direksi bertindak untuk dan atas nama Perseroan Terbatas <strong>PT LIKUID JAYA
+            PRATAMA</strong>,
+          berkedudukan di
+          Jakarta, yang anggaran dasarnya dimuat dalam Akta Pendirian Nomor 01 tanggal 02 Mei 2019, dibuat dihadapan
+          Lanawaty Darmadi, S.H., M.Kn. Notaris di Kabupaten Tangerang, yang sebagaimana perubahan terakhirnya
+          termaktub
+          dalam Akta Pernyataan Keputusan Para Pemegang Saham Nomor 64 tanggal 31 Agustus 2023 dibuat dihadapan
+          Lanawaty
+          Darmadi, S.H., M.M., M.Kn., Notaris di Jakarta. selanjutnya disebut sebagai
+          <strong>“Penyelenggara”</strong>
+          dan
+        </li>
+        <li>
+          <%= name %>, sebuah perusahaan yang berkedudukan di <%= corp_city %>, berdasarkan hukum Indonesia
+              dengan Akta Pendirian Nomor <%= deed_establishment_number %>, tanggal <%= corp_created_date %>, dibuat
+                  dihadapan
+                  <%= notary_name %>>, Notaris di Kabupaten <%= notary_city %>, yang telah memperoleh pengesahan dari
+                      Menteri Hukum dan Hak Asasi Manusia Republik Indonesia, diwakilkan oleh <%= person_full_name %>,
+                        selaku
+                        <%= person_position %> selanjutnya disebut sebagai “Pemodal”.
+        </li>
+      </ul>
+      <br />
+
+      <h1>PASAL 1<br />DEFINISI</h1>
+      <ol class="numbered-list">
+        <li><strong>Kustodian</strong> adalah pihak yang memberikan jasa penitipan Efek dan harta lain yang berkaitan
+          dengan Efek serta jasa lain, termasuk menerima dividen, bunga, dan hak-hak lain, menyelesaikan transaksi Efek
+          dan mewakili pemegang rekening yang menjadi nasabahnya.
+        </li>
+        <li><strong>Lembaga Penyimpanan dan Penyelesaian</strong> adalah pihak yang menyelenggarakan kegiatan kustodian
+          sentral bagi bank kustodian, perusahaan efek, dan pihak lain.
+        </li>
+        <li> <strong>Efek</strong> adalah surat berharga, yaitu surat pengakuan utang, surat berharga komersial, saham,
+          obligasi, tanda bukti utang, unit penyertaan kontrak investasi kolektif, kontrak berjangka atas Efek, dan
+          setiap derivatif dari Efek, yang dapat dialihkan dan/atau diperdagangkan di Pasar Modal. </li>
+        <li><strong>Layanan Urun Dana Melalui Penawaran Efek Berbasis Teknologi Informasi (Securities
+            Crowdfunding)</strong> yang selanjutnya disebut “Layanan Urun Dana” adalah penyelenggaraan layanan penawaran
+          Efek yang dilakukan oleh penerbit untuk menjual Efek secara langsung kepada Pemodal Institusi melalui jaringan
+          sistem elektronik yang bersifat terbuka.</li>
+        <li><strong>Pengguna</strong> adalah penerbit dan pemodal.</li>
+        <li><strong>Penyelenggara atau EKUID</strong> adalah PT LIKUID JAYA PRATAMA, suatu perseroan terbatas yang
+          didirikan di Indonesia, beralamat di Jl. Ciniru III No.2, RT.2/RW.3, Kel. Rawa Barat, Kec. Kebayoran Baru,
+          Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12180 yang bergerak di bidang usaha layanan jasa keuangan,
+          dengan kegiatan usaha antara lain menyediakan, mengelola dan mengoperasikan Layanan Urun Dana (Securities
+          Crowdfunding) yang pada saat ini beralamat di eku.id (“Situs Web”).</li>
+        <li><strong>Penerbit</strong> adalah badan hukum Indonesia berbentuk perseroan terbatas yang menawarkan Efek
+          melalui Penyelenggara.</li>
+        <li><strong>Pemodal Institusi</strong> adalah pihak yang
+          melakukan pembelian Efek Penerbit melalui Penyelenggara.
+        </li>
+        <li><strong>Otoritas Jasa Keuangan (“OJK”)</strong> adalah lembaga negara yang independen dan bebas dari campur
+          tangan pihak lain, yang mempunyai fungsi, tugas dan wewenang pengaturan, pengawasan, pemeriksaan dan
+          penyidikan terhadap seluruh kegiatan pada sektor jasa keuangan.</li>
+        <li><strong>Peraturan OJK tentang Layanan Urun Dana</strong> adalah Peraturan Otoritas Jasa Keuangan Republik
+          Indonesia Nomor 57/POJK.04/2020 tentang Penawaran Efek Melalui Layanan Urun Dana Berbasis Teknologi Informasi
+          (Securities Crowdfunding).</li>
+        <li><strong>Proyek</strong> adalah kegiatan atau pekerjaan yang menghasilkan barang, jasa, dan/atau manfaat
+          lain, baik yang sudah ada maupun yang akan ada, termasuk kegiatan investasi yang telah ditentukan yang akan
+          menjadi dasar penerbitan atas Efek bersifat utang.</li>
+        <li><strong>Syarat dan Ketentuan EKUID</strong> adalah keterangan mengenai syarat-syarat dan ketentuan-ketentuan
+          layanan EKUID kepada Pengguna.</li>
+      </ol>
+      <br />
+
+      <h1>PASAL 2<br />PENDAFTARAN</h1>
+      <ol class="numbered-list">
+        <li> Pemodal Institusi wajib terlebih dahulu melakukan
+          pendaftaran yang disertai pemberian informasi data pribadi
+          Pemodal Institusi sebagaimana diminta dalam Situs Web
+          Penyelenggara (“Data Pribadi”).</li>
+        <li>Pemodal Institusi wajib memberikan informasi yang
+          akurat dan lengkap, dan setuju untuk memberikan kepada
+          Penyelenggara bukti identitas apapun yang secara wajar dapat dimintakan. </li>
+        <li>Jika terdapat perubahan pada Data Pribadi yang diberikan Pemodal Institusi kepada Penyelenggara, antara lain
+          namun tidak terbatas pada perubahan nomor telepon dan alamat, maka Pemodal Institusi wajib memperbarui
+          informasi
+          Pemodal tersebut dengan mengirimkan permintaan Pemodal Institusi kepada Penyelenggara.</li>
+        <li>Informasi terkait Data Pribadi yang diberikan hanya akan digunakan oleh Penyelenggara untuk pemberian
+          penyelenggaraan Layanan Urun Dana sesuai dengan ketentuan perundang-undangan yang berlaku. </li>
+      </ol>
+
+      <br />
+      <h1>PASAL 3<br />PERSYARATAN PEMODAL</h1>
+      <ol class="numbered-list">
+        <li>
+          Syarat menjadi Pemodal Institusi adalah sebagai berikut:
+          <ol class="sub-list">
+            <li> Badan hukum atau badan usaha yang didirikan di Indonesia; atau</li>
+            <li>Memiliki rekening Efek pada Bank Kustodian yang khusus untuk menyimpan Efek dan/atau dana melalui
+              Layanan Urun Dana;</li>
+            <li>Memiliki kemampuan untuk membeli Efek Penerbit.</li>
+          </ol>
+        </li>
+        <li> Pemodal Institusi memberikan pernyataan dan memberikan
+          jaminan bahwa Pemodal Institusi memenuhi salah satu
+          dari syarat pada ayat (1) pasal ini. Penyelenggara berhak untuk menutup atau membatalkan Akun Pemodal
+          apabila
+          hal tersebut tidak benar.</li>
+        <li>Dalam hal Pemodal Institusi tidak lagi memenuhi syarat
+          di atas, Pemodal Institusi harus segera memberitahukan
+          kepada Penyelenggara, dan Penyelenggara berhak menangguhkan keikutsertaan Pemodal Institusi sampai Pemodal
+          Institusi kembali memenuhi syarat. </li>
+        <li>Pemodal Institusi hanya boleh memiliki satu Akun di
+          Situs Web Penyelenggara. Pemodal Institusi tidak boleh
+          membuat Akun baru di Situs Web Penyelenggara dengan alamat email lain atau identitas lain.</li>
+      </ol>
+      <br />
+
+      <h1>PASAL 4
+        <br />BERLAKUNYA PERJANJIAN
+      </h1>
+      <ol class="numbered-list">
+        <li>
+          Perjanjian ini berlaku dan mengikat secara hukum bagi Pemodal Layanan Urun Dana pada saat Pemodal Institusi
+          menyatakan persetujuan atas isi Perjanjian ini.
+        </li>
+        <li>Dengan mendaftar dan atau mengakses, menggunakan Akun pada Situs Web Penyelenggara, Pemodal Institusi adalah
+          pihak yang telah memberikan konfirmasi persetujuan secara sistem elektronik mengenai pemenuhan persyaratan
+          sebagai Pemodal Institusi yang dapat berinvestasi melalui Layanan Urun Dana yang SETUJU untuk mengikuti dan
+          mematuhi semua pasal-pasal yang ada dalam Perjanjian ini, berikut syarat dan ketentuan, disclaimer serta
+          kebijakan privasi pada Situs Web Penyelenggara yang merupakan bagian yang tidak dapat dipisahkan dari
+          Perjanjian ini.
+        </li>
+      </ol>
+      <br />
+
+      <h1>
+        PASAL 5<br />
+        PERNYATAAN DAN JAMINAN
+      </h1>
+      <p>Bahwa Pemodal Institusi dengan ini menyatakan dan menjamin sebagai berikut:
+      </p>
+      <ol class="sub-list">
+        <li>Bahwa seluruh informasi dan dokumen terkait identitas atau profil Pemodal yang Pemodal Institusi berikan
+          kepada Penyelenggara adalah akurat, benar dan tidak menyesatkan.</li>
+        <li>Bahwa Pemodal Institusi memiliki kemampuan untuk membeli Efek Penerbit, memiliki kemampuan analisis risiko
+          terhadap Efek Penerbit, dan memenuhi kriteria Pemodal sebagaimana diatur dalam Perjanjian ini.</li>
+        <li>Bahwa Pemodal Institusi memiliki hak, wewenang dan/atau persetujuan yang diperlukan untuk melakukan
+          investasi pada Layanan Urun Dana dalam membuat dan menandatangani perjanjian, surat kuasa dan dokumen lain
+          yang diperlukan.</li>
+        <li>Bahwa Pemodal Institusi tidak dinyatakan pailit, dan tidak berada di bawah perwalian atau pengampuan.</li>
+        <li>Bahwa Pemodal Institusi telah memeriksa, menilai, mengevaluasi, menganalisa data dan informasi mengenai
+          Penerbit dan juga Penyelenggara melalui informasi yang disediakan dalam Situs Web Penyelenggara.</li>
+        <li>Bahwa Pemodal Institusi telah mengetahui dan memahami mengenai kegiatan usaha Penerbit selaku pemilik usaha
+          yang hendak mengumpulkan dana untuk menjalankan kegiatan usaha dan/atau proyek yang akan didanai dengan dana
+          hasil penjualan Efek melalui Layanan Urun Dana dan dengan ini menyetujui Penawaran Efek Penerbit.</li>
+        <li>Bahwa Pemodal Institusi memberi kuasa kepada Penyelenggara untuk menyediakan, mengelola dan mengoperasikan
+          Layanan Urun Dana untuk mewakili Pemodal Institusi sebagai pemegang Efek Penerbit termasuk dalam Rapat Umum
+          Pemegang Efek Penerbit dan penandatanganan akta/perjanjian dan/atau dokumen terkait lainnya.</li>
+        <li>Bahwa dana yang disetor pada rekening Escrow Account merupakan milik Pemodal Institusi sendiri dan diperoleh
+          dengan cara yang tidak bertentangan dengan hukum yang berlaku di Indonesia, sesuai dengan ketentuan peraturan
+          perundang-undangan mengenai penerapan program anti pencucian uang dan pencegahan pendanaan terorisme.</li>
+        <li>Bahwa Pemodal Institusi tidak akan menjual, mengalihkan, menjaminkan, membebankan, memindahtangankan
+          kepemilikan Efek pada Layanan Urun Dana di Penyelenggara kepada siapapun sebagaimana ditetapkan dalam
+          Peraturan OJK tentang Layanan Urun Dana.</li>
+        <li>Bahwa Pemodal Institusi memahami dan setuju untuk mengikatkan diri, mengikuti dan mematuhi ketentuan dan
+          syarat-syarat yang ada pada Perjanjian ini, berikut syarat dan ketentuan, disclaimer serta kebijakan privasi
+          pada Situs Web Penyelenggara yang merupakan bagian yang tidak terpisahkan dengan Perjanjian ini. </li>
+        <li>Bahwa Pemodal Institusi telah membaca dengan seksama semua ketentuan-ketentuan yang mungkin akan
+          mempengaruhi Pemodal dan bertindak berdasarkan keputusan Pemodal sendiri.</li>
+      </ol>
+      <br />
+
+      <h1>
+        PASAL 6<br />
+        HUBUNGAN PEMODAL DAN PENYELENGGARA
+      </h1>
+
+      <ol class="numbered-list">
+        <li>Dalam hal penawaran Efek bersifat ekuitas berupa saham, Pemodal Institusi memberikan kuasa kepada
+          Penyelenggara untuk menyediakan, mengelola dan mengoperasikan Layanan Urun Dana untuk mewakili Pemodal
+          Institusi sebagai pemegang saham Penerbit termasuk dalam Rapat Umum Pemegang saham Penerbit dan
+          penandatanganan akta dan/atau dokumen terkait lainnya.</li>
+        <li>Dalam hal penawaran Efek bersifat utang, Pemodal Institusi memberikan kuasa kepada Penyelenggara sebagai
+          kuasa pemodal untuk menyediakan, mengelola dan mengoperasikan Layanan Urun Dana untuk mewakili Pemodal
+          Institusi sebagai pemegang Efek bersifat utang termasuk dalam Rapat Umum Pemegang Efek dan penandatanganan
+          akta dan/atau dokumen terkait lainnya.</li>
+        <li>Penyelenggara menyediakan Situs Web untuk memberikan akses bagi Pengguna untuk:
+          <ol class="sub-list">
+            <li> Melakukan Penggalangan Dana dari Pemodal melalui Penawaran Efek Berbasis Teknologi Informasi
+              (Securities Crowdfunding). </li>
+            <li>Memberikan Pendanaan kepada Penerbit untuk menjalankan Kegiatan Usaha dan/atau membiayai Proyeknya dari
+              hasil penjualan Efek Penerbit.</li>
+            <li>Membawa/memperkenalkan Penerbit kepada Pemodal, berdasarkan dokumen dan informasi yang disampaikan
+              Penerbit kepada Penyelenggara. </li>
+            <li>Memublikasikan prosedur singkat Layanan Pengaduan</li>
+          </ol>
+        </li>
+        <li> Penyelenggara tidak memberikan nasihat investasi dan/atau rekomendasi apapun kepada setiap Pemodal
+          Institusi dan/atau calon Pemodal untuk berinvestasi pada Penerbit.</li>
+        <li>Pemodal Institusi setuju bahwa setiap materi Layanan Urun Dana yang ditayangkan pada Situs Web Penyelenggara
+          adalah informasi belaka dan bukan merupakan penawaran kepada Pemodal untuk menjual, membeli atau berinvestasi.
+          Lebih lanjut lagi, Pemodal Institusi dengan ini menyatakan bahwa persetujuan Pemodal sendirilah yang mengakses
+          dan memberi informasi terkait penyelenggaraan Layanan Urun Dana yang terdapat di Situs Web Penyelenggara.</li>
+        <li>Penyelenggara tidak akan melakukan penawaran Layanan Urun Dana kepada Pemodal Institusi melalui sarana
+          komunikasi pribadi tanpa persetujuan Pemodal. </li>
+        <li>Penyelenggara akan menerima dan/atau menyimpan dana Pemodal pada rekening escrow account. </li>
+      </ol>
+      <br />
+
+      <h1> PASAL 7<br />
+        PENGGUNAAN SITUS WEB
+      </h1>
+
+      <ol class="numbered-list">
+        <li>Pemodal dapat mengakses Situs Web Penyelenggara https://www.eku.id secara penuh menggunakan username dan
+          password yang Pemodal Institusi buat sendiri (“Akun”). Selama username dan password tersebut digunakan, maka
+          Penyelenggara dapat meyakini bahwa Pemodal Institusi adalah pihak yang mengakses Situs Web Penyelenggara
+          menggunakan username dan password tersebut.</li>
+        <li>Pemodal Institusi berjanji untuk tidak menyerahkan, mengalihkan maupun memberikan wewenang kepada orang lain
+          untuk menggunakan identitas Pemodal atau menggunakan Akun Pemodal, dan tidak diperbolehkan memberikan username
+          dan password Pemodal kepada pihak lain. Apabila Pemodal Institusi melanggar ketentuan ini, maka Pemodal
+          Institusi bertanggung jawab sepenuhnya atas tindakan dan segala resiko yang mungkin terjadi yang dilakukan
+          pihak lain selama menggunakan username dan password Pemodal.</li>
+        <li>Pemodal Institusi wajib menjaga kerahasiaan password Akun Pemodal dan setiap identifikasi yang Penyelenggara
+          berikan kepada Pemodal Institusi atas Akun atau Data Pribadi Pemodal. Dalam hal terjadi pengungkapan atas
+          password Pemodal yang terjadi bukan atas kesalahan Penyelenggara, dengan cara apapun yang mengakibatkan
+          penggunaan yang tidak sah dan tanpa kewenangan atas Akun Pemodal, transaksi atas layanan yang dilakukan
+          melalui Situs Web Penyelenggara tetap diyakini sebagai transaksi yang sah.</li>
+        <li>Pemodal Institusi diharuskan untuk melaporkan kepada Penyelenggara bila Pemodal, oleh sebab apapun, tidak
+          memiliki kontrol atas Akun Pemodal. Pemodal bertanggung jawab atas setiap penggunaan Akun Pemodal dalam Situs
+          Web meskipun jika Akun tersebut telah disalahgunakan oleh orang lain.</li>
+        <li>Pemodal Institusi tidak diperkenankan untuk membahayakan, menyalahgunakan, mengubah atau memodifikasi Situs
+          Web dengan cara apapun. Penyelenggara berhak untuk menutup atau membatalkan Akun Pemodal dan melarang Pemodal
+          Institusi untuk menggunakan Akun Pemodal lebih lanjut jika Pemodal Institusi menggunakan Situs Web tanpa
+          mematuhi syarat dan ketentuan dalam Perjanjian ini.</li>
+        <li>Pemodal Institusi berjanji bahwa Pemodal akan menggunakan Situs Web hanya untuk tujuan yang dimaksud untuk
+          mendapatkan akses layanan. Pemodal Institusi tidak diperbolehkan untuk menyalahgunakan atau menggunakan Situs
+          Web untuk aktivitas yang bertentangan dengan hukum, termasuk namun tidak terbatas kepada tindak pidana
+          pencucian uang, pencurian, penggelapan, terorisme maupun penipuan. Pemodal Institusi juga berjanji bahwa
+          Pemodal Institusi tidak akan menyebabkan ketidaknyamanan kepada orang lain atau melakukan pemesanan palsu
+          melalui Situs Web Penyelenggara.</li>
+        <li>Pemodal Institusi mengetahui dan setuju bahwa setiap informasi dalam bentuk apapun, termasuk namun tidak
+          terbatas pada video, audio, gambar atau tulisan yang ada dalam Situs Web memiliki hak atas kekayaan
+          intelektual (termasuk namun tidak terbatas kepada hak atas merek dan hak cipta) masing-masing. Pemodal
+          Institusi tidak diperbolehkan untuk menggunakan, mengubah, memfasilitasi, menyebarluaskan dan/atau
+          menambahkan/mengambil sebagian hak atas kekayaan intelektual tersebut tanpa izin dari Penyelenggara atas
+          kekayaan intelektual tersebut sebagaimana diatur dalam peraturan perundang-undangan yang berlaku.</li>
+        <li>Pada saat mengakses dan menggunakan Situs Web termasuk setiap fitur dan layanannya, Pemodal Institusi tidak
+          diperkenankan untuk:
+          <ol class="sub-list">
+            <li> Mengalihkan Akun Pemodal di Situs Web kepada pihak lain tanpa persetujuan terlebih dahulu dari
+              Penyelenggara.</li>
+            <li>Menyebarkan virus, spam atau teknologi sejenis lainnya yang dapat merusak dan/atau merugikan Situs Web
+              dan pengguna Situs Web lainnya.</li>
+            <li>Memasukkan atau memindahkan fitur pada Situs Web tanpa persetujuan dari Penyelenggara.</li>
+            <li>Menempatkan informasi atau aplikasi lain yang melanggar hak kekayaan intelektual pihak lain di dalam
+              Situs Web.</li>
+            <li>Mengambil atau mengumpulkan data pribadi dari pengguna Situs Web lain, termasuk tetapi tidak terbatas
+              pada alamat e-mail dan/atau surat elektronik lainnya, tanpa persetujuan dari pengguna tersebut.</li>
+            <li>Menggunakan Situs Web untuk untuk hal-hal yang dilarang berdasarkan hukum dan undang-undang yang
+              berlaku.</li>
+            <li>Menggunakan Situs Web untuk mendistribusikan iklan atau materi lainnya.</li>
+          </ol>
+        </li>
+      </ol>
+      <br />
+
+      <h1>
+        PASAL 8
+        PEMBELIAN EFEK <br />
+      </h1>
+      <ol class="numbered-list">
+        <li> Dalam melakukan pembelian Efek pada masa penawaran Efek yang terdapat di Situs Web Penyelenggara, Pemodal
+          Institusi dianggap telah mempelajari dokumen dan atau informasi yang ada dan bertindak berdasarkan keputusan
+          Pemodal sendiri tanpa bergantung pada nasihat atau rekomendasi yang diberikan pihak manapun.</li>
+        <li>Pemodal Institusi setuju bahwa pembelian Efek dilakukan dengan menyetorkan sejumlah dana pada escrow account
+          .</li>
+        <li>Pemodal Institusi setuju bahwa Efek yang Pemodal beli akan dicatat dan didistribusikan secara elektronik
+          melalui penitipan kolektif pada Kustodian yang ditunjuk oleh Penyelenggara dan Penerbit, berdasarkan
+          perjanjian Penerbit dengan lembaga Penyimpanan dan Penyelesaian..</li>
+        <li>Pemodal Institusi setuju melakukan pembukaan rekening Efek pada Kustodian.</li>
+        <li>Pemodal Institusi setuju bahwa bukti kepemilikan berupa catatan kepemilikan Efek yang terdapat dalam
+          rekening Efek pada Kustodian dilakukan melalui Penyelenggara.</li>
+      </ol>
+
+      <h1>
+        PASAL 9<br />
+        VIRTUAL ACCOUNT </h1>
+      <ol class="numbered-list">
+        <li> Pemodal Institusi akan mempunyai (dibuatkan/didaftarkan) virtual account Layanan Urun Dana di Penyelenggara
+          yang berfungsi sebagai escrow account untuk dapat digunakan menampung dana atau deposit yang telah Pemodal
+          lakukan serta untuk menampung seluruh pendapatan (baik dalam bentuk dividen, hasil jual-beli Efek, bunga,
+          imbal hasil atau pendapatan lainnya) yang Penyelenggara atau Kustodian terima terkait dengan pembelian Efek
+          dan/atau transaksi lain yang Pemodal lakukan.</li>
+        <li>Penyelenggara akan memastikan bahwa Kustodian yang ditunjuk Penyelenggara akan menempatkan ke virtual
+          account Pemodal atas seluruh pendapatan (baik dalam bentuk dividen, hasil jual-beli Efek, bunga, imbal hasil
+          atau pendapatan lainnya) maupun pokok dalam hal Efek bersifat utang, yang Penyelenggara atau Kustodian terima
+          terkait dengan pembelian Efek dan/atau transaksi lain yang Pemodal Institusi lakukan. </li>
+        <li>Nama pemilik rekening virtual account harus sama dengan nama pada dokumen identitas Pemodal yang ada pada
+          Penyelenggara. Kesalahan pada Nomor dan atau Nama pemilik rekening bank menjadi tanggung jawab Pemodal
+          Institusi. Nama dan nomor rekening bank tidak dapat diubah kecuali dengan persetujuan dan sudah diverifikasi
+          oleh Penyelenggara.</li>
+        <li>Pemodal Institusi menyatakan bahwa seluruh dana yang digunakan dalam transaksi Layanan Urun Dana tidak
+          berasal dari kegiatan usaha yang bertentangan dengan kegiatan usaha yang dilarang dan bertentangan dengan
+          Undang-undang yang berlaku yang meliputi tetapi tidak terbatas pada: tindak pidana pencucian uang, hasil
+          kegiatan yang terkait dengan tindakan terorisme, hasil dari korupsi, penipuan, prostitusi, penjualan obat-obat
+          psikotropika (narkotik dan jenis obat terlarang lainnya). Jika dikemudian hari ditemukan bukti bahwa dana
+          berasal dari satu atau lebih kegiatan di atas, maka Penyelenggara dianggap telah melakukan langkah-langkah
+          pencegahan dengan kapasitasnya sebagai Penyelenggara, dan Pemodal Institusi menyatakan bahwa Pemodal sepenuhnya
+          bertanggung jawab atas sumber dana yang Pemodal miliki. Kemudian Penyelenggara akan memberikan dokumen dan
+          informasi kepada otoritas atau pihak yang berwenang jika diperlukan.</li>
+      </ol>
+      <br />
+      <h1>
+        PASAL 10 <br />
+        PENDAPATAN DAN BIAYA
+      </h1>
+
+      <ol class="numbered-list">
+        <li> Pemodal Institusi berhak atas imbal hasil berupa bunga untuk proyek (dalam hal Efek bersifat utang) yang
+          akan diterima secara langsung di dalam rekening yang dicantumkan oleh Pemodal, sesuai dengan tanggal yang
+          telah ditetapkan. </li>
+        <li>Penyelenggara berhak mengenakan biaya kepada Pemodal Institusi termasuk namun tidak terbatas pada biaya
+          transaksi, biaya jasa aplikasi dan biaya perawatan aplikasi yang dibayarkan pada saat Pemodal Institusi
+          pertama kali melakukan transaksi pembelian efek. Rincian perhitungan biaya tersebut tertera dalam Syarat dan
+          Ketentuan EKUID dan/atau keterangan terkait biaya pengguna pada website & aplikasi EKUID. </li>
+      </ol>
+      <br />
+
+      <h1>
+        PASAL 11<br />
+        PAJAK
+      </h1>
+
+      <ol class="numbered-list">
+        <li> Terkait urusan perpajakan di dalam Layanan Urun Dana yang diselenggarakan oleh Penyelenggara, maka untuk
+          kewajiban perpajakan yang timbul atas penambahan nilai manfaat bagi penerima bunga akan ditanggung oleh
+          masing-masing pihak.</li>
+        <li>Merujuk pada Ayat 1 sehubungan dengan bunga yang dibayarkan oleh Penyelenggara Layanan Urun Dana adalah nett
+          atau tidak dipotong pajak, maka Penyelenggara tidak menerbitkan atau mengeluarkan bukti potong pajak atas
+          pembayaran bunga kepada pemodal. </li>
+        <li>Dengan demikian penyelenggara tidak bertanggung jawab atas pembayaran perpajakan pemodal. Kewajiban
+          perpajakan yang timbul bagi penerima manfaat atas bunga yang dibayarkan kepada Pemodal menjadi kewajiban
+          masing-masing pihak saat pelaporan SPT Tahunan. </li>
+      </ol>
+
+      <br />
+
+      <h1>
+        PASAL 12<br />
+        PENGEMBALIAN DANA
+      </h1>
+
+      <ol class="numbered-list">
+        <li> Pemodal Institusi mengetahui dan setuju atas Jumlah Minimum Dana dalam masa penawaran Efek Penerbit yang
+          terdapat di Situs Web Penyelenggara.</li>
+        <li> Penyelenggara akan mengembalikan dana beserta seluruh manfaat yang timbul dari dana tersebut selama dalam
+          escrow account secara proporsional kepada Pemodal Institusi paling lambat 2 (dua) hari kerja jika Jumlah
+          Minimum Dana tersebut tidak terpenuhi sesuai dengan Peraturan OJK tentang Layanan Urun Dana.</li>
+        <li> Penyelenggara akan mengembalikan dana Pemodal apabila terjadi pembatalan oleh Penerbit dalam masa penawaran
+          Efek melalui Layanan Urun Dana disertai dengan denda dari Penerbit sejumlah Rp 10.000.000 (sepuluh juta
+          rupiah) kepada Pemodal Institusi. </li>
+        <li> Pemodal Institusi dapat membatalkan rencana pembelian Efek melalui Layanan Urun Dana paling lambat dalam
+          waktu 48 (empat puluh delapan) jam setelah melakukan pembelian Efek.</li>
+        <li> Dalam hal terjadi pembatalan, baik yang dilakukan oleh Penerbit maupun Pemodal Institusi, maka
+          Penyelenggara
+          wajib mengembalikan dana Pemodal paling lambat 2 (dua) hari kerja setelah pembatalan tersebut.</li>
+      </ol>
+
+      <br />
+
+      <h1>
+        PASAL 13<br />
+        DOKUMEN DAN INFORMASI, SERTA KERAHASIAAN
+      </h1>
+
+      <ol class="numbered-list">
+        <li> Penyelenggara tidak akan mengungkapkan dokumen dan informasi terkait identitas, profil dan data pribadi
+          Pemodal, serta transaksi yang Pemodal Institusi lakukan di Penyelenggara kepada pihak manapun, kecuali dalam
+          hal diwajibkan oleh ketentuan peraturan perundang-undangan.</li>
+        <li>Pemodal Institusi dengan ini memberikan persetujuan dan otorisasi kepada Penyelenggara untuk perolehan,
+          penggunaan, pemanfaatan, dan pengungkapan dokumen dan informasi terkait identitas, profil, data pribadi dan
+          data keuangan Pemodal maupun transaksi Layanan Urun Dana, atau pembelian Efek di Penyelenggara kepada pihak
+          yang dianggap perlu oleh Penyelenggara, termasuk namun tidak terbatas kepada:
+          <ol class="sub-list">
+            <li> Afiliasi dari Penyelenggara;</li>
+            <li>Direktur, Komisaris, atau Karyawan Penyelenggara;</li>
+            <li>Penyedia jasa penunjang atas aktivitas usaha Penyelenggara, termasuk penyedia jasa bank, penyedia jasa
+              sistem elektronik, konsultan atau penyedia jasa penilaian kelayakan usaha, konsultan hukum, konsultan
+              keuangan, konsultan teknis dan konsultan pajak yang ditunjuk Penyelenggara untuk memberikan jasa penunjang
+              yang relevan; dan</li>
+            <li>Pihak yang berwenang sesuai dengan ketentuan peraturan perundang-undangan.</li>
+          </ol>
+        </li>
+      </ol>
+      <br />
+
+
+      <h1>
+        PASAL 14<br />
+        KETENTUAN LAIN-LAIN
+      </h1>
+      <ol class="numbered-list">
+        <li> Perjanjian ini dapat ditandatangani secara elektronik dalam beberapa rangkap salinan. Dokumen yang
+          ditandatangani demikian mempunyai akibat yang sama seolah-olah tanda tangan tersebut dibubuhkan secara
+          tertulis dan pada satu rangkap tunggal.</li>
+        <li>Para Pihak mengakui keabsahan penandatanganan secara elektronik dan tidak akan mengajukan bantahan atas
+          keabsahan Perjanjian ini dengan dasar tanda tangan elektronik tersebut.</li>
+        <li>Penyelenggara sewaktu-waktu dapat merubah syarat, ketentuan dan pasal-pasal yang ada pada Perjanjian ini
+          dan
+          perubahan tersebut akan mulai berlaku sejak perubahan tersebut dimuat pada Situs Web Penyelenggara. Jika
+          dalam
+          jangka waktu 30 hari sejak perubahan tersebut dimuat pada Situs Web tidak ada konfirmasi apapun dari Pemodal
+          Institusi, maka Pemodal dianggap telah menyetujui perubahan tersebut.</li>
+      </ol>
+      <br />
+
+      <h1>PASAL 15<br />
+        PENGAKHIRAN PERJANJIAN</h1>
+      <ol class="numbered-list">
+        <li>Pemodal Institusi dapat menghapus Akun Pemodal melalui halaman kontak yang Penyelenggara sediakan. Untuk
+          membatalkan Akun tersebut, Pemodal Institusi wajib memberikan informasi kepada Penyelenggara bahwa Pemodal
+          adalah pemilik asli Akun tersebut. Akun Pemodal Institusi akan dibatalkan setelah ada konfirmasi dari
+          Penyelenggara mengenai otorisasi keabsahan identitas Pemodal.</li>
+        <li>Penyelenggara berhak menghapus Akun Pemodal Institusi tanpa pemberitahuan sebelumnya untuk kepentingan
+          Situs Web. Penghapusan Akun ini dapat terjadi bila adanya hal-hal termasuk, tetapi tidak terbatas pada:
+          <ol class="sub-list">
+            <li>Pelanggaran Syarat dan Ketentuan yang berlaku di Situs Web;</li>
+            <li>Permintaan dari Otoritas Jasa Keuangan dan/atau otoritas/pihak yang berwenang lainnya;</li>
+            <li>Permintaan dari Pemodal Institusi sendiri; dan</li>
+            <li>Tindak pidana penipuan, penggelapan dan/atau tindak pidana lainnya atau hal-hal lain yang telah atau
+              berpotensi merugikan pihak manapun.</li>
+          </ol>
+        </li>
+        <li>Penyelenggara dapat tidak meneruskan kegiatan Layanan Urun Dana dengan mengembalikan izin kepada Otoritas
+          Jasa Keuangan sesuai Peraturan OJK tentang Layanan Urun Dana.</li>
+        <li>Penghapusan Akun dan/atau Pengembalian Izin sebagaimana dimaksud diatas menyebabkan berakhirnya Perjanjian
+          ini, dengan tidak mengurangi rencana penyelesaian Penyelenggara terkait Hak dan Kewajiban Pemodal Institusi.
+        </li>
+      </ol>
+      <br />
+
+
+      <h1>PASAL 16<br />
+        PROSEDUR PELAYANAN DAN PENYELESAIAN PENGADUAN PENGGUNA</h1>
+      <ol class="numbered-list">
+        <li>Pengajuan pengaduan kepada Penyelenggara hanya dapat dilakukan oleh Pengguna atau perwakilan Pengguna yang
+          bertindak untuk dan atas nama Pengguna.</li>
+        <li>Pengguna dapat menyampaikan pengaduan kepada Penyelenggara melalui Pengaduan secara lisan dan/atau
+          Pengaduan secara tertulis.</li>
+        <li>Pengaduan secara lisan dari Pengguna akan ditangani dan diselesaikan dalam 5 (lima) hari kerja sejak
+          tanggal pengaduan diterima. Apabila pengaduan yang diajukan oleh Pengguna memerlukan penanganan dan
+          penyelesaian lebih dari 5 (lima) hari kerja, maka Penyelenggara akan menyampaikan kepada Pengguna agar
+          mengajukan pengaduannya secara tertulis.</li>
+        <li>Pengaduan secara lisan yaitu sebagai berikut:
+          <ol class="sub-list">
+            <li>Komunikasi dengan Tim Customer Service (CS) Penyelenggara melalui layanan pesan Messenger/ Whatsapp
+              yang ada di halaman utama www.eku.id;</li>
+            <li>Pada laman Hubungi Kami di website, www.eku.id terdapat formulir yang dapat diisi oleh Pengguna.
+              Sertakan pula identitas berupa nama, nomor telepon dan alamat email;</li>
+            <li>Pengguna menghubungi Penyelenggara melalui email ke support@eku.id.</li>
+          </ol>
+        </li>
+        <li>
+          Pengaduan secara tertulis dapat disampaikan oleh Pengguna kepada Penyelenggara melalui surat atau email ke
+          support@eku.id. Dalam hal pengaduan diajukan secara tertulis, maka Pengguna wajib melampirkan fotokopi
+          identitas
+          dan dokumen pendukung lainnya. Pengaduan secara tertulis akan ditangani dan diselesaikan dalam 20 (dua
+          puluh)
+          hari kerja sejak tanggal penerimaan pengaduan diterima oleh Penyelenggara dan dapat diperpanjang sampai
+          dengan
+          paling lama 20 (dua puluh) hari kerja berikutnya apabila Penyelenggara memerlukan perpanjangan waktu untuk
+          penyelesaian pengaduan Pengguna yang disebabkan oleh kondisi tertentu dengan memperhatikan ketentuan hukum
+          yang
+          berlaku. Dalam hal ini Penyelenggara akan memberitahukan secara tertulis kepada Pengguna sebelum jangka
+          waktu 20
+          (dua puluh) hari kerja yang pertama berakhir.
+        </li>
+        <li> Dalam Jangka waktu sebagaimana dimaksud dalam ayat 5 Pasal ini, Penyelenggara akan menyampaikan Tanggapan
+          Pengaduan secara tertulis kepada Pengguna yang sekurang-kurangnya memuat penawaran penyelesaian terkait
+          pengaduan Pengguna.</li>
+        <li>
+          Penerimaan atau penolakan terhadap tanggapan pengaduan sebagaimana dimaksud dalam ayat 6 pasal ini wajib
+          disampaikan secara tertulis kepada Penyelenggara selambat-lambatnya 20 (dua puluh) hari kerja setelah
+          Tanggapan
+          Pengaduan tersebut diterima oleh Pengguna.</li>
+      </ol>
+      </ol>
+      <br />
+
+      <h1>
+        PASAL 17<br />
+        HUKUM YANG BERLAKU DAN PENYELESAIAN PERSELISIHAN
+      </h1>
+
+      <ol class="numbered-list">
+        <li> Apabila Tanggapan Pengaduan sebagaimana dimaksud dalam Pasal 16 ayat 6 Perjanjian ini ditolak oleh
+          Pengguna, maka dalam jangka waktu 30 (tiga puluh) Hari Kalender sejak Penolakan tertulis tersebut diterima
+          oleh Penyelenggara (“Masa Tenggang”), Para Pihak dapat melakukan upaya penyelesaian sengketa atau perselisihan
+          tersebut melalui pengadilan atau di luar pengadilan.</li>
+        <li>Penyelesaian sengketa melalui pengadilan sebagaimana dimaksud pada ayat (1), Para Pihak dengan ini sepakat
+          untuk menunjuk Pengadilan Negeri Jakarta Pusat sebagai institusi atau wadah Penyelesaian Sengketa.</li>
+        <li>Penyelesaian sengketa di luar pengadilan sebagaimana dimaksud pada ayat (1) dilakukan melalui Lembaga
+          Alternatif Penyelesaian Sengketa yang dimuat dalam Daftar Lembaga Alternatif Penyelesaian Sengketa yang
+          ditetapkan oleh Otoritas Jasa Keuangan, maka penyelesaian sengketa di luar pengadilan akan dilakukan melalui
+          Badan Arbitrase Pasar Modal Indonesia (“BAPMI”) dengan menggunakan Peraturan BAPMI dan tunduk pada
+          Undang-Undang Nomor 30 tahun 1999 (seribu sembilan ratus sembilan puluh sembilan) tentang Arbitrase dan
+          Alternatif Penyelesaian Sengketa (“UU Arbitrase”) berikut semua perubahannya, kecuali secara tegas ditentukan
+          lain dalam Perjanjian ini. </li>
+        <li>Putusan Majelis Arbitrase BAPMI sebagaimana dimaksud pada ayat (3) bersifat final, mengikat dan mempunyai
+          kekuatan hukum tetap bagi Para Pihak yang berselisih dan wajib dilaksanakan oleh Para Pihak yang berselisih.
+        </li>
+        <li>Para Pihak dengan ini setuju dan berjanji untuk tidak menggugat atau membatalkan putusan Majelis Arbitrase
+          BAPMI tersebut di pengadilan manapun juga. </li>
+        <li>Untuk melaksanakan putusan Majelis Arbitrase BAPMI, Para Pihak dengan ini memilih domisili (tempat kedudukan
+          hukum) yang tetap dan tidak berubah di Kantor Panitera Pengadilan Negeri Jakarta Pusat di Jalan Bungur Besar
+          Raya Nomor 24, 26, 28, Kelurahan Gunung Sahari Selatan, Kecamatan Kemayoran, Jakarta Pusat. </li>
+        <li>Semua biaya yang timbul sehubungan dengan proses Arbitrase akan ditanggung oleh masing-masing Pihak yang
+          berselisih. </li>
+        <li>Semua hak dan kewajiban Para Pihak berdasarkan perjanjian ini akan terus berlaku selama berlangsungnya
+          proses Arbitrase tersebut.</li>
+      </ol>
+      <br />
+
+      <h1>
+        PASAL 18<br />
+        PEMBERITAHUAN (KORESPONDENSI)
+      </h1>
+
+      <ol class="numbered-list">
+        <li> Setiap komunikasi kepada Pemodal Institusi dapat dibuat melalui Situs Web Penyelenggara atau secara
+          tertulis, atau melalui media komunikasi lain yang memadai dan sah secara hukum, atau Situs Web / media
+          komunikasi lain yang mempunyai kerjasama dengan Penyelenggara misalnya bank dan lembaga keuangan.</li>
+        <li>Alamat dari Penyelenggara dan Pemodal Institusi adalah alamat yang terdaftar di Situs Web Penyelenggara.
+        </li>
+        <li>Setiap komunikasi sehubungan dengan Perjanjian ini akan dianggap telah diberikan sebagai berikut:
+          <ol class="sub-list">
+            <li> apabila dimuat melalui Situs Web Penyelenggara, pada saat dimuat;</li>
+            <li>apabila dikirimkan langsung, pada saat dikirim;</li>
+            <li>apabila dikirimkan melalui pos, 5 (lima) Hari Kerja setelah dititipkan di kantor pos, dengan perangko
+              yang sudah dibayar dimuka, dalam amplop yang sudah dialamatkan dengan benar; dan</li>
+            <li>apabila dikirimkan melalui e-mail atau komunikasi elektronik lain, pada saat diterima dalam bentuk yang
+              dapat dibaca.</li>
+          </ol>
+        </li>
+        <li>Suatu komunikasi yang telah diberikan, tetapi diterima pada hari yang bukan hari kerja atau setelah jam
+          kerja di tempat diterimanya komunikasi akan dianggap telah diberikan pada hari kerja berikutnya di tempat
+          tersebut.</li>
+      </ol>
+
+      <p>Perjanjian ini mengikat Para Pihak berdasarkan tanda tangan atau persetujuan secara elektronik sebagaimana
+        diatur dalam Undang-undang Nomor 11 Tahun 2008 Tentang Informasi dan Transaksi Elektronik.
+      </p>
+
+      <div class="signature">
+        <div class="left">
+          <p>PENYELENGGARA</p>
+          <br /></br></br>
+          <p>(Felicitas Hakso Widiarto)<br />
+            Direktur Utama<br />
+            <strong>PT LIKUID JAYA PRATAMA</strong>
+          </p>
+        </div>
+        <div class="right">
+          <p>PEMODAL</p>
+          <br /></br></br>
+          <p>
+            (<%= person_full_name %>)<br />
+              <%= person_position %><br />
+              <strong><%= name %></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+
+  </div>
+</body>
+
+</html>
