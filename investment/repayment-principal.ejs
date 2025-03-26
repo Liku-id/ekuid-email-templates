@@ -4,226 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Repayment Principal</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@700&family=Mulish:wght@300;700&family=Open+Sans:wght@400&display=swap");
-
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #ffffff;
-        font-family: "Mulish", sans-serif;
-      }
-      p,
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-      }
-
-      /* Header */
-      .header {
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header
+      class="header"
+      style="
         margin: 40px auto;
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-
-      .header img {
-        width: 100px;
-      }
-
-      /*  Main */
-      .container {
-        padding: 0;
-      }
-
-      .main-image {
-        width: 100%;
-      }
-
-      .content {
-        padding: 0 30px;
-        margin: 48px 0;
-      }
-
-      .content h2 {
-        font-family: "Mulish", sans-serif;
-        color: #243962;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 100%;
-      }
-
-      .content p {
-        margin-top: 24px;
-        color: #69758b;
-        font-family: "Mulish", sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-        letter-spacing: 0.238px;
-      }
-
-      .main-btn {
-        border-radius: 60px;
-        border: 1px solid #005b9c;
-        background: #005b9c;
-        display: inline-flex;
-        padding: 16px 32px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        color: #fff;
-        font-family: "Anek Bangla", sans-serif;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100%;
-        letter-spacing: 0.48px;
-        margin-top: 58px;
-      }
-
-      .centered {
-        display: flex;
-        justify-content: center;
-      }
-
-      /* Footer */
-      .footer {
-        background-color: #1f335b;
-        color: white;
-        text-align: center;
-        padding: 34px 40px;
-      }
-
-      .footer-wrap {
-        background-color: #29406d;
-        padding: 27px 36px;
-        border-radius: 8px;
-      }
-
-      .footer h2 {
-        font-family: "Anek Bangla", sans-serif;
-        color: white;
-        margin: 0;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 150%;
-        letter-spacing: 0.306px;
-        margin-top: 10px;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-      }
-
-      .social-icons img {
-        width: 40px;
-      }
-
-      .download-buttons {
-        display: flex;
-        justify-content: center;
-        margin-top: 8px;
-        gap: 8px;
-      }
-
-      .download-buttons img {
-        width: 135px;
-      }
-
-      .disclaimer {
-        background-color: #1f335b;
-        padding: 40px;
-        border-radius: 8px;
-        margin: 20px auto;
-        max-width: 600px;
-        text-align: left;
-      }
-
-      .disclaimer p {
-        color: #fff;
-        font-family: "Mulish", sans-serif;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-      }
-
-      strong {
-        font-weight: 700 !important;
-      }
-
-      .auto-email,
-      .address {
-        margin-top: 24px;
-        opacity: 0.8;
-        font-family: "Open Sans", sans-serif;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-        letter-spacing: 0.17px;
-      }
-
-      @media (max-width: 425px) {
-        .content {
-          padding: 0 23px;
-          margin: 38px 0;
-        }
-        .content h2 {
-          font-size: 22px;
-        }
-        .content p {
-          font-size: 12px;
-        }
-        .main-btn {
-          margin-top: 40px;
-          font-size: 18px;
-        }
-        .disclaimer {
-          padding: 24px;
-        }
-        .footer {
-          padding: 34px 24px;
-        }
-        .footer-wrap {
-          padding: 27px 24px;
-        }
-      }
-
-      @media (max-width: 375px) {
-        .download-buttons {
-          display: grid;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header class="header">
+      "
+    >
       <img
         src="https://storage.googleapis.com/ekuid-assets/Icon/logo-ekuid-combine.svg"
         alt="Ekuid"
+        style="width: 100px"
       />
     </header>
 
     <!-- CONTENT -->
-    <main class="container">
+    <main class="container" style="padding: 0">
       <img
         src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/repayment-interest.svg"
         alt="Repayment Principal"
         class="main-image"
+        style="width: 100%"
       />
 
-      <section class="content">
-        <h2>Hai <%= firstName %>,</h2>
-        <p>
+      <section class="content" style="padding: 0 30px; margin: 48px 0">
+        <h2
+          style="
+            margin: 0;
+            font-family: 'Mulish', sans-serif;
+            color: #243962;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 100%;
+          "
+        >
+          Hai <%= firstName %>,
+        </h2>
+        <p
+          style="
+            margin: 0;
+            margin-top: 24px;
+            color: #69758b;
+            font-family: 'Mulish', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.238px;
+          "
+        >
           Terima kasih telah mempercayai EKUID untuk berinvestasi!<br /><br />
 
           Selamat! Hari ini, <b><%= currentDate %></b>, Penerbit
@@ -249,16 +84,56 @@
             target="_blank"
             href="https://eku.id/project?utm_source=brevo&utm_campaign=Ekuid - Pembayaran Pokok&utm_medium=email"
           >
-            <button class="main-btn">Temukan Proyek Baru</button>
+            <button
+              class="main-btn"
+              style="
+                border-radius: 60px;
+                border: 1px solid #005b9c;
+                background: #005b9c;
+                display: inline-flex;
+                padding: 16px 32px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                color: #fff;
+                font-family: 'Anek Bangla', sans-serif;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 0.48px;
+                margin-top: 58px;
+              "
+            >
+              Temukan Proyek Baru
+            </button>
           </a>
         </div>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-wrap">
-        <div class="social-icons">
+    <footer
+      class="footer"
+      style="
+        background-color: #1f335b;
+        color: white;
+        text-align: center;
+        padding: 34px 40px;
+      "
+    >
+      <div
+        class="footer-wrap"
+        style="
+          background-color: #29406d;
+          padding: 27px 36px;
+          border-radius: 8px;
+        "
+      >
+        <div
+          class="social-icons"
+          style="display: flex; justify-content: center; gap: 8px"
+        >
           <a
             href="https://www.instagram.com/ekuidofficial"
             target="_blank"
@@ -268,6 +143,7 @@
             <img
               src="https://storage.googleapis.com/ekuid-assets/Assets/instagram.svg"
               alt="Instagram"
+              style="width: 40px"
             />
           </a>
 
@@ -280,6 +156,7 @@
             <img
               src="https://storage.googleapis.com/ekuid-assets/Assets/linked-in.svg"
               alt="LinkedIn"
+              style="width: 40px"
             />
           </a>
 
@@ -292,13 +169,36 @@
             <img
               src="https://storage.googleapis.com/ekuid-assets/Assets/tiktok.svg"
               alt="TikTok"
+              style="width: 40px"
             />
           </a>
         </div>
 
-        <h2>Download Aplikasi:</h2>
+        <h2
+          style="
+            margin: 0;
+            font-family: 'Anek Bangla', sans-serif;
+            color: white;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            letter-spacing: 0.306px;
+            margin-top: 10px;
+          "
+        >
+          Download Aplikasi:
+        </h2>
 
-        <div class="download-buttons">
+        <div
+          class="download-buttons"
+          style="
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+            gap: 8px;
+          "
+        >
           <a
             href="https://apps.apple.com/us/app/ekuid/id1607289110"
             target="_blank"
@@ -309,6 +209,7 @@
               src="https://storage.googleapis.com/ekuid-assets/Assets/app-store-v2.svg"
               alt="Download on the App Store"
               class="right"
+              style="width: 135px"
             />
           </a>
 
@@ -321,29 +222,76 @@
             <img
               src="https://storage.googleapis.com/ekuid-assets/Assets/play-store-v2.svg"
               alt="Get it on Google Play"
+              style="width: 135px"
             />
           </a>
         </div>
 
-        <div class="disclaimer">
-          <p>
-            <strong>Perhatian:</strong> Ekuid adalah platform investasi dengan
-            risiko tinggi. Pastikan kamu sudah memahami profil risikomu. Harap
-            mempertimbangkan secara hati-hati setiap kamu melakukan investasi di
-            Ekuid. Pastikan keputusan investasi kamu adalah keputusan yang kamu
-            buat sendiri dan tidak ada unsur paksaan dari pihak manapun. Ekuid
-            tidak pernah memaksa kamu untuk melakukan investasi di platform
-            kami. Ekuid tidak bertanggung jawab atas segla bentuk risiko
-            kerugian dan gugatan hukum serta hal lain yang timbul di kemudian
-            hari.
+        <div
+          class="disclaimer"
+          style="
+            background-color: #1f335b;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+          "
+        >
+          <p
+            style="
+              margin: 0;
+              color: #fff;
+              font-family: 'Mulish', sans-serif;
+              font-size: 10px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%;
+            "
+          >
+            <strong style="font-weight: 700 !important">Perhatian:</strong>
+            Ekuid adalah platform investasi dengan risiko tinggi. Pastikan kamu
+            sudah memahami profil risikomu. Harap mempertimbangkan secara
+            hati-hati setiap kamu melakukan investasi di Ekuid. Pastikan
+            keputusan investasi kamu adalah keputusan yang kamu buat sendiri dan
+            tidak ada unsur paksaan dari pihak manapun. Ekuid tidak pernah
+            memaksa kamu untuk melakukan investasi di platform kami. Ekuid tidak
+            bertanggung jawab atas segla bentuk risiko kerugian dan gugatan
+            hukum serta hal lain yang timbul di kemudian hari.
           </p>
         </div>
 
-        <p class="auto-email">
+        <p
+          class="auto-email"
+          style="
+            margin: 0;
+            margin-top: 24px;
+            opacity: 0.8;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.17px;
+          "
+        >
           Ini adalah e-mail otomatis, mohon untuk tidak membalas e-mail ini.
         </p>
 
-        <p class="address">
+        <p
+          class="address"
+          style="
+            margin: 0;
+            margin-top: 24px;
+            opacity: 0.8;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.17px;
+          "
+        >
           Jl. Ciniru III No.2, RT.2/RW.3, Rawa Barat, Kecamatan Kebayoran Baru,
           Jakarta Selatan 12180, Indonesia
         </p>
