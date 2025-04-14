@@ -4,29 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pendaftaran SRE Ditolak</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: "Mulish", sans-serif;
+      }
+      @media (max-width: 425px) {
+        .content {
+          padding: 0 23px;
+          margin: 38px 0;
+        }
+        .content h2 {
+          font-size: 22px;
+        }
+        .content p {
+          font-size: 12px;
+        }
+        .main-btn {
+          margin-top: 40px;
+          font-size: 18px;
+        }
+        .disclaimer {
+          padding: 24px;
+        }
+        .footer {
+          padding: 34px 24px;
+        }
+        .footer-wrap {
+          padding: 27px 24px;
+        }
+        .download-row-desktop {
+          display: none !important;
+        }
+        .download-row-mobile {
+          display: table-row !important;
+        }
+      }
+      @media (max-width: 375px) {
+        .download-buttons {
+          display: grid;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- HEADER -->
-    <header
-      class="header"
-      style="
-        margin: 40px auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      "
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="margin: 40px 0"
     >
-      <img
-        src="https://storage.googleapis.com/ekuid-assets/Icon/logo-ekuid-combine.svg"
-        alt="Ekuid"
-        style="width: 100px"
-      />
-    </header>
+      <tr>
+        <td align="center">
+          <img
+            src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/ekuid-logo.png"
+            alt="Ekuid"
+            width="100"
+            border="0"
+            style="display: block"
+          />
+        </td>
+      </tr>
+    </table>
 
     <!-- CONTENT -->
     <main class="container" style="padding: 0">
       <img
-        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/sre-register-failed.svg"
+        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/sre-register-failed.png"
         alt="Pendaftaran SRE Ditolak"
         class="main-image"
         style="width: 100%"
@@ -118,57 +167,63 @@
         class="footer-wrap"
         style="
           background-color: #29406d;
-          padding: 27px 36px;
           border-radius: 8px;
+          padding: 27px 36px;
         "
       >
-        <div
-          class="social-icons"
-          style="display: flex; justify-content: center; gap: 8px"
-        >
-          <a
-            href="https://www.instagram.com/ekuidofficial"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="instagram-icon"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/instagram.svg"
-              alt="Instagram"
-              style="width: 40px"
-            />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/company/ekuid"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="linkedIn-icon"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/linked-in.svg"
-              alt="LinkedIn"
-              style="width: 40px"
-            />
-          </a>
-
-          <a
-            href="https://www.tiktok.com/@ekuid"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="tiktok-icon"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/tiktok.svg"
-              alt="TikTok"
-              style="width: 40px"
-            />
-          </a>
-        </div>
+        <!-- SOCIAL ICONS -->
+        <table align="center" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0 4px">
+              <a
+                href="https://www.instagram.com/ekuidofficial"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/instagram.png"
+                  alt="Instagram"
+                  width="40"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+            <td style="padding: 0 4px">
+              <a
+                href="https://www.linkedin.com/company/ekuid"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/linked-in.png"
+                  alt="LinkedIn"
+                  width="40"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+            <td style="padding: 0 4px">
+              <a
+                href="https://www.tiktok.com/@ekuid"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/tiktok.png"
+                  alt="TikTok"
+                  width="40"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
+        </table>
 
         <h2
           style="
-            margin: 0;
             font-family: 'Anek Bangla', sans-serif;
             color: white;
             font-size: 18px;
@@ -176,69 +231,107 @@
             font-weight: 700;
             line-height: 150%;
             letter-spacing: 0.306px;
-            margin-top: 10px;
+            margin: 10px 0 0;
           "
         >
           Download Aplikasi:
         </h2>
 
-        <div
-          class="download-buttons"
-          style="
-            display: flex;
-            justify-content: center;
-            margin-top: 8px;
-            gap: 8px;
-          "
+        <!-- DOWNLOAD BUTTONS -->
+        <table
+          align="center"
+          cellpadding="0"
+          cellspacing="0"
+          border="0"
+          style="margin-top: 8px"
         >
-          <a
-            href="https://apps.apple.com/us/app/ekuid/id1607289110"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="appstore-logo"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/app-store-v2.svg"
-              alt="Download on the App Store"
-              class="right"
-              style="width: 135px"
-            />
-          </a>
+          <!-- Desktop layout -->
+          <tr class="download-row-desktop" style="display: table-row">
+            <td style="padding: 0 4px">
+              <a
+                href="https://apps.apple.com/us/app/ekuid/id1607289110"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/app-store-v2.png"
+                  alt="Download on the App Store"
+                  width="135"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+            <td style="padding: 0 4px">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ekuid.android.production"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/play-store-v2.png"
+                  alt="Get it on Google Play"
+                  width="135"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
 
-          <a
-            href="https://play.google.com/store/apps/details?id=com.ekuid.android.production"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="playstore-logo"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/play-store-v2.svg"
-              alt="Get it on Google Play"
-              style="width: 135px"
-            />
-          </a>
-        </div>
+          <!-- Mobile stacked layout -->
+          <tr class="download-row-mobile" style="display: none">
+            <td style="padding: 4px 0" colspan="2">
+              <a
+                href="https://apps.apple.com/us/app/ekuid/id1607289110"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/app-store-v2.png"
+                  alt="Download on the App Store"
+                  width="135"
+                  style="display: block; margin: 0 auto"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
+          <tr class="download-row-mobile" style="display: none">
+            <td style="padding: 4px 0" colspan="2">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ekuid.android.production"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/play-store-v2.png"
+                  alt="Get it on Google Play"
+                  width="135"
+                  style="display: block; margin: 0 auto"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
+        </table>
 
         <div
           class="disclaimer"
           style="
             background-color: #1f335b;
-            padding: 40px;
             border-radius: 8px;
-            margin: 20px auto;
             max-width: 600px;
-            text-align: left;
+            margin: 20px auto;
+            padding: 40px;
           "
+          align="left"
         >
           <p
             style="
-              margin: 0;
               color: #fff;
               font-family: 'Mulish', sans-serif;
               font-size: 10px;
               font-style: normal;
               font-weight: 400;
               line-height: 150%;
+              margin: 0;
             "
           >
             <strong style="font-weight: 700 !important">Perhatian:</strong>
@@ -256,8 +349,6 @@
         <p
           class="auto-email"
           style="
-            margin: 0;
-            margin-top: 24px;
             opacity: 0.8;
             font-family: 'Open Sans', sans-serif;
             font-size: 10px;
@@ -265,6 +356,7 @@
             font-weight: 400;
             line-height: 150%;
             letter-spacing: 0.17px;
+            margin: 24px 0 0;
           "
         >
           Ini adalah e-mail otomatis, mohon untuk tidak membalas e-mail ini.
@@ -273,8 +365,6 @@
         <p
           class="address"
           style="
-            margin: 0;
-            margin-top: 24px;
             opacity: 0.8;
             font-family: 'Open Sans', sans-serif;
             font-size: 10px;
@@ -282,6 +372,7 @@
             font-weight: 400;
             line-height: 150%;
             letter-spacing: 0.17px;
+            margin: 24px 0 0;
           "
         >
           Jl. Ciniru III No.2, RT.2/RW.3, Rawa Barat, Kecamatan Kebayoran Baru,

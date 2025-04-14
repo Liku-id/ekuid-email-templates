@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promo Baru</title>
@@ -37,6 +36,12 @@
         .footer-wrap {
           padding: 27px 24px;
         }
+        .download-row-desktop {
+          display: none !important;
+        }
+        .download-row-mobile {
+          display: table-row !important;
+        }
       }
       @media (max-width: 375px) {
         .download-buttons {
@@ -45,31 +50,32 @@
       }
     </style>
   </head>
-  <body
-    style="font-family: 'Mulish', sans-serif; margin: 0; padding: 0"
-    bgcolor="#ffffff"
-  >
+  <body>
     <!-- HEADER -->
-    <header
-      class="header"
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 40px auto;
-      "
+    <table
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="margin: 40px 0"
     >
-      <img
-        src="https://storage.googleapis.com/ekuid-assets/Icon/logo-ekuid-combine.svg"
-        alt="Ekuid"
-        style="width: 100px"
-      />
-    </header>
+      <tr>
+        <td align="center">
+          <img
+            src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/ekuid-logo.png"
+            alt="Ekuid"
+            width="100"
+            border="0"
+            style="display: block"
+          />
+        </td>
+      </tr>
+    </table>
 
     <!-- CONTENT -->
     <main class="container" style="padding: 0">
       <img
-        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/new-promo.svg"
+        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/new-promo.png"
         alt="Promo Baru"
         class="main-image"
         style="width: 100%"
@@ -155,49 +161,56 @@
           padding: 27px 36px;
         "
       >
-        <div
-          class="social-icons"
-          style="display: flex; justify-content: center; gap: 8px"
-        >
-          <a
-            href="https://www.instagram.com/ekuidofficial"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="instagram-icon"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/instagram.svg"
-              alt="Instagram"
-              style="width: 40px"
-            />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/company/ekuid"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="linkedIn-icon"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/linked-in.svg"
-              alt="LinkedIn"
-              style="width: 40px"
-            />
-          </a>
-
-          <a
-            href="https://www.tiktok.com/@ekuid"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="tiktok-icon"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/tiktok.svg"
-              alt="TikTok"
-              style="width: 40px"
-            />
-          </a>
-        </div>
+        <!-- SOCIAL ICONS -->
+        <table align="center" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding: 0 4px">
+              <a
+                href="https://www.instagram.com/ekuidofficial"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/instagram.png"
+                  alt="Instagram"
+                  width="40"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+            <td style="padding: 0 4px">
+              <a
+                href="https://www.linkedin.com/company/ekuid"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/linked-in.png"
+                  alt="LinkedIn"
+                  width="40"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+            <td style="padding: 0 4px">
+              <a
+                href="https://www.tiktok.com/@ekuid"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/tiktok.png"
+                  alt="TikTok"
+                  width="40"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
+        </table>
 
         <h2
           style="
@@ -214,42 +227,80 @@
           Download Aplikasi:
         </h2>
 
-        <div
-          class="download-buttons"
-          style="
-            display: flex;
-            justify-content: center;
-            margin-top: 8px;
-            gap: 8px;
-          "
+        <!-- DOWNLOAD BUTTONS -->
+        <table
+          align="center"
+          cellpadding="0"
+          cellspacing="0"
+          border="0"
+          style="margin-top: 8px"
         >
-          <a
-            href="https://apps.apple.com/us/app/ekuid/id1607289110"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="appstore-logo"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/app-store-v2.svg"
-              alt="Download on the App Store"
-              class="right"
-              style="width: 135px"
-            />
-          </a>
+          <!-- Desktop layout -->
+          <tr class="download-row-desktop" style="display: table-row">
+            <td style="padding: 0 4px">
+              <a
+                href="https://apps.apple.com/us/app/ekuid/id1607289110"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/app-store-v2.png"
+                  alt="Download on the App Store"
+                  width="135"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+            <td style="padding: 0 4px">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ekuid.android.production"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/play-store-v2.png"
+                  alt="Get it on Google Play"
+                  width="135"
+                  style="display: block"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
 
-          <a
-            href="https://play.google.com/store/apps/details?id=com.ekuid.android.production"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="playstore-logo"
-          >
-            <img
-              src="https://storage.googleapis.com/ekuid-assets/Assets/play-store-v2.svg"
-              alt="Get it on Google Play"
-              style="width: 135px"
-            />
-          </a>
-        </div>
+          <!-- Mobile stacked layout -->
+          <tr class="download-row-mobile" style="display: none">
+            <td style="padding: 4px 0" colspan="2">
+              <a
+                href="https://apps.apple.com/us/app/ekuid/id1607289110"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/app-store-v2.png"
+                  alt="Download on the App Store"
+                  width="135"
+                  style="display: block; margin: 0 auto"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
+          <tr class="download-row-mobile" style="display: none">
+            <td style="padding: 4px 0" colspan="2">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ekuid.android.production"
+                target="_blank"
+              >
+                <img
+                  src="https://storage.googleapis.com/ekuid-assets/Assets/play-store-v2.png"
+                  alt="Get it on Google Play"
+                  width="135"
+                  style="display: block; margin: 0 auto"
+                  border="0"
+                />
+              </a>
+            </td>
+          </tr>
+        </table>
 
         <div
           class="disclaimer"
