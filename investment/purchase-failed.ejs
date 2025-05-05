@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Repayment Interest</title>
+    <title>Pembelian Gagal</title>
 
     <style>
       body {
@@ -75,8 +75,8 @@
     <!-- CONTENT -->
     <main class="container" style="padding: 0">
       <img
-        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/repayment-interest.png"
-        alt="Repayment Interest"
+        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/payment-failed.png"
+        alt="Pembelian Gagal"
         class="main-image"
         style="width: 100%"
       />
@@ -95,6 +95,7 @@
         >
           Hai <%= firstName %>,
         </h2>
+
         <p
           style="
             margin: 0;
@@ -108,18 +109,29 @@
             letter-spacing: 0.238px;
           "
         >
-          Terima kasih telah mempercayai EKUID untuk berinvestasi!<br /><br />
+          Terima kasih telah mempercayai EKUID untuk berinvestasi!<br />
+          Kami informasikan bahwa pembelian efek kamu belum berhasil karena slot
+          investasi di proyek <b><%= projectName %></b><br /><br />
 
-          Selamat! Pada hari ini, <b><%= currentDate %></b>, Penerbit
-          <b><%= projectName %></b> telah melakukan pembayaran imbal hasil
-          dengan detail sebagai berikut:<br /><br />
+          Berikut detail pembelian kamu:<br /><br />
+          Nama proyek: <b><%= projectName %></b><br />
+          Jumlah pembayaran: <b><%= investmentAmout %></b><br />
 
-          Nominal Pembayaran Imbal Hasil: <b><%= repaymentAmount %></b><br />
-          Pembayaran Imbal Hasil ke: <b><%= numberOfRepayment %></b><br /><br />
+          Nomor VA: <b><%= vaNumber %></b><br /><br />
 
-          Silakan cek status berkala imbal hasil kamu melalui rekening yang
-          terdaftar ya! Jika ada pertanyaan, jangan ragu untuk menghubungi tim
-          kami melalui tombol WhatsApp di bawah, ya!
+          Jangan khawatir, dana kamu akan segera dikembalikan ke rekening yang
+          telah terdaftar di sistem kami, ya!<br /><br />
+
+          Berikut detail rekening kamu:<br /><br />
+
+          Nama Bank: <b><%= bankName %></b><br />
+          Nama Pemilik Rekening: <b><%= accountHolderName %></b><br /><br />
+
+          Proses pengembalian dana akan kami selesaikan dalam waktu maksimal
+          2x24 jam. Terima kasih atas pengertian dan dukungan kamu untuk terus
+          #AktifDukungKreatif bersama EKUID! Silakan cek status berkala dana
+          kamu melalui rekening yang terdaftar ya! Jika ada pertanyaan, jangan
+          ragu untuk menghubungi tim kami melalui tombol WhatsApp di bawah, ya!
         </p>
 
         <div style="margin-bottom: 42px; text-align: center">
@@ -138,7 +150,7 @@
                 margin: 8px;
                 color: #005b9c;
                 font-family: 'Anek Bangla', sans-serif;
-                font-size: 19px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 100%;
@@ -154,7 +166,7 @@
           <!-- Primary button -->
           <a
             target="_blank"
-            href="https://eku.id/profile?utm_source=brevo&utm_campaign=Ekuid - Pembayaran Bunga NEW&utm_medium=email"
+            href="https://eku.id/profile?utm_source=brevo&utm_campaign=Ekuid - Pembelian Gagal&utm_medium=email"
             style="text-decoration: none"
           >
             <button
@@ -166,7 +178,7 @@
                 margin: 8px;
                 color: #fff;
                 font-family: 'Anek Bangla', sans-serif;
-                font-size: 19px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 100%;
@@ -174,7 +186,7 @@
                 cursor: pointer;
               "
             >
-              Cek Imbal Hasil
+              Cek Portofolio
             </button>
           </a>
         </div>

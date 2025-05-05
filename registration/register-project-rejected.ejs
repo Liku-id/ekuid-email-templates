@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Repayment Interest</title>
+    <title>Pendaftaran Proyek Belum Dapat Diproses</title>
 
     <style>
       body {
@@ -75,8 +75,8 @@
     <!-- CONTENT -->
     <main class="container" style="padding: 0">
       <img
-        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/repayment-interest.png"
-        alt="Repayment Interest"
+        src="https://storage.googleapis.com/ekuid-assets/Email%20Assets/project-regist-rejected.png"
+        alt="Pendaftaran Proyek Belum Dapat Diproses"
         class="main-image"
         style="width: 100%"
       />
@@ -108,62 +108,34 @@
             letter-spacing: 0.238px;
           "
         >
-          Terima kasih telah mempercayai EKUID untuk berinvestasi!<br /><br />
+          Terima kasih sudah percayakan EKUID untuk membantu menumbuhkan bisnis
+          kamu, ya!<br /><br />
 
-          Selamat! Pada hari ini, <b><%= currentDate %></b>, Penerbit
-          <b><%= projectName %></b> telah melakukan pembayaran imbal hasil
-          dengan detail sebagai berikut:<br /><br />
+          Saat ini, data Penerbit kamu telah kami verifikasi dan mohon maaf
+          belum dapat kami proses ke langkah berikutnya. Tapi jangan khawatir,
+          ya! Kamu selalu bisa mengajukan pendanaan kembali di waktu yang akan
+          datang.<br /><br />
 
-          Nominal Pembayaran Imbal Hasil: <b><%= repaymentAmount %></b><br />
-          Pembayaran Imbal Hasil ke: <b><%= numberOfRepayment %></b><br /><br />
-
-          Silakan cek status berkala imbal hasil kamu melalui rekening yang
-          terdaftar ya! Jika ada pertanyaan, jangan ragu untuk menghubungi tim
-          kami melalui tombol WhatsApp di bawah, ya!
+          Jika ada pertanyaan lebih lanjut mengenai detail penolakan, silahkan
+          menghubungi tim kami melalui tombol WhatsApp di bawah, ya!<br /><br />
         </p>
 
         <div style="margin-bottom: 42px; text-align: center">
-          <!-- Secondary button -->
           <a
             target="_blank"
-            href="https://wa.me/6281213137125?text=Hai Rico, saya membutuhkan bantuan di"
-            style="text-decoration: none"
+            href="https://api.whatsapp.com/send/?phone=6281213137125&text=Hai+Rico%2C+saya+mau+tanya+terkait+status+proyek&type=phone_number&app_absent=0"
           >
             <button
-              style="
-                border-radius: 60px;
-                border: 1px solid #005b9c;
-                background: #ffffff;
-                padding: 16px 32px;
-                margin: 8px;
-                color: #005b9c;
-                font-family: 'Anek Bangla', sans-serif;
-                font-size: 19px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 100%;
-                letter-spacing: 0.48px;
-                margin-top: 58px;
-                cursor: pointer;
-              "
-            >
-              Hubungi Kami
-            </button>
-          </a>
-
-          <!-- Primary button -->
-          <a
-            target="_blank"
-            href="https://eku.id/profile?utm_source=brevo&utm_campaign=Ekuid - Pembayaran Bunga NEW&utm_medium=email"
-            style="text-decoration: none"
-          >
-            <button
+              class="main-btn"
               style="
                 border-radius: 60px;
                 border: 1px solid #005b9c;
                 background: #005b9c;
+                display: inline-flex;
                 padding: 16px 32px;
-                margin: 8px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
                 color: #fff;
                 font-family: 'Anek Bangla', sans-serif;
                 font-size: 19px;
@@ -171,10 +143,10 @@
                 font-weight: 700;
                 line-height: 100%;
                 letter-spacing: 0.48px;
-                cursor: pointer;
+                margin-top: 58px;
               "
             >
-              Cek Imbal Hasil
+              Tanya Status kamu
             </button>
           </a>
         </div>
